@@ -1,0 +1,52 @@
+PODS:
+  - CCInfiniteScrolling (0.1):
+    - DProperty
+    - JRSwizzle
+    - UIView+TKGeometry
+  - DProperty (0.0.2)
+  - JRSwizzle (1.0)
+  - MRProgress (0.5.1):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Helper
+    - MRProgress/Icons
+    - MRProgress/MessageInterceptor
+    - MRProgress/NavigationBarProgress
+    - MRProgress/Overlay
+    - MRProgress/Stopable
+    - MRProgress/WeakProxy
+  - MRProgress/ActivityIndicator (0.5.1):
+    - MRProgress/Stopable
+  - MRProgress/Blur (0.5.1):
+    - MRProgress/Helper
+  - MRProgress/Circular (0.5.1):
+    - MRProgress/Helper
+    - MRProgress/Stopable
+  - MRProgress/Helper (0.5.1)
+  - MRProgress/Icons (0.5.1)
+  - MRProgress/MessageInterceptor (0.5.1)
+  - MRProgress/NavigationBarProgress (0.5.1)
+  - MRProgress/Overlay (0.5.1):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Helper
+    - MRProgress/Icons
+  - MRProgress/Stopable (0.5.1):
+    - MRProgress/Helper
+  - MRProgress/WeakProxy (0.5.1)
+  - UIView+TKGeometry (0.2)
+
+DEPENDENCIES:
+  - CCInfiniteScrolling (~> 0.1)
+  - MRProgress (~> 0.5)
+
+SPEC CHECKSUMS:
+  CCInfiniteScrolling: 720f0e5ec7d0689b793b2959a9aa283d78ed88bb
+  DProperty: 2a0f2a805ca6b1528262efa964baaca1a444defd
+  JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
+  MRProgress: 7853c177e7d79b90e6f0910561967ebcf3289eb1
+  UIView+TKGeometry: 60a88dcf2af8420175cb1c789a02d6254ebb89a7
+
+COCOAPODS: 0.33.1

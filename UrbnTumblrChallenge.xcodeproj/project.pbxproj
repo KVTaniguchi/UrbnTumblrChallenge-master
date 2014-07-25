@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7430CB319634621005B0B99 /* KTPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7430CB219634621005B0B99 /* KTPostCell.m */; };
+		C77F86B619817B48005694D6 /* KTFlowLayOut.m in Sources */ = {isa = PBXBuildFile; fileRef = C77F86B519817B48005694D6 /* KTFlowLayOut.m */; };
+		C784F4191961C4C7004045DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F4181961C4C7004045DC /* Foundation.framework */; };
+		C784F41B1961C4C7004045DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F41A1961C4C7004045DC /* CoreGraphics.framework */; };
+		C784F41D1961C4C7004045DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F41C1961C4C7004045DC /* UIKit.framework */; };
+		C784F4231961C4C7004045DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C784F4211961C4C7004045DC /* InfoPlist.strings */; };
+		C784F4251961C4C7004045DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C784F4241961C4C7004045DC /* main.m */; };
+		C784F4291961C4C7004045DC /* KTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C784F4281961C4C7004045DC /* KTAppDelegate.m */; };
+		C784F42C1961C4C7004045DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C784F42A1961C4C7004045DC /* Main.storyboard */; };
+		C784F42F1961C4C7004045DC /* KTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C784F42E1961C4C7004045DC /* KTViewController.m */; };
+		C784F4311961C4C7004045DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C784F4301961C4C7004045DC /* Images.xcassets */; };
+		C784F4381961C4C7004045DC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F4371961C4C7004045DC /* XCTest.framework */; };
+		C784F4391961C4C7004045DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F4181961C4C7004045DC /* Foundation.framework */; };
+		C784F43A1961C4C7004045DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F41C1961C4C7004045DC /* UIKit.framework */; };
+		C784F4421961C4C7004045DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C784F4401961C4C7004045DC /* InfoPlist.strings */; };
+		C784F44F1961C6D1004045DC /* KTDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C784F44E1961C6D1004045DC /* KTDataLoader.m */; };
+		C797AED1196504E50009FE0F /* KTPostStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C797AED0196504E50009FE0F /* KTPostStore.m */; };
+		C7985D391967063C0056F0A1 /* KTStoreTester.m in Sources */ = {isa = PBXBuildFile; fileRef = C7985D381967063C0056F0A1 /* KTStoreTester.m */; };
+		C7989F15196456950096B741 /* KTPostCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7989F14196456950096B741 /* KTPostCVC.m */; };
+		C798D2E91965DE1C0083B2B1 /* reload-75.png in Resources */ = {isa = PBXBuildFile; fileRef = C798D2E81965DE1C0083B2B1 /* reload-75.png */; };
+		C798D2EC196655B20083B2B1 /* PostModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C798D2EA196655B20083B2B1 /* PostModel.xcdatamodeld */; };
+		C7AB06991964990B00473E24 /* KTSearchResultsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AB06981964990B00473E24 /* KTSearchResultsVC.m */; };
+		C7CB6210196DF9F40082E57F /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CB620F196DF9F40082E57F /* Post.m */; };
+		D86717A961C441BBA34BF5BD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D6898003DD478C942353C6 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C784F43B1961C4C7004045DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C784F40D1961C4C7004045DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C784F4141961C4C7004045DC;
+			remoteInfo = UrbnTumblrChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50D6898003DD478C942353C6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3EECF7E3C584CEDB8DDE87D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C7430CB119634621005B0B99 /* KTPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPostCell.h; sourceTree = "<group>"; };
+		C7430CB219634621005B0B99 /* KTPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPostCell.m; sourceTree = "<group>"; };
+		C77F86B419817B48005694D6 /* KTFlowLayOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTFlowLayOut.h; sourceTree = "<group>"; };
+		C77F86B519817B48005694D6 /* KTFlowLayOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTFlowLayOut.m; sourceTree = "<group>"; };
+		C784F4151961C4C7004045DC /* UrbnTumblrChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbnTumblrChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C784F4181961C4C7004045DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C784F41A1961C4C7004045DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C784F41C1961C4C7004045DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C784F4201961C4C7004045DC /* UrbnTumblrChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UrbnTumblrChallenge-Info.plist"; sourceTree = "<group>"; };
+		C784F4221961C4C7004045DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C784F4241961C4C7004045DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C784F4261961C4C7004045DC /* UrbnTumblrChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UrbnTumblrChallenge-Prefix.pch"; sourceTree = "<group>"; };
+		C784F4271961C4C7004045DC /* KTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTAppDelegate.h; sourceTree = "<group>"; };
+		C784F4281961C4C7004045DC /* KTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTAppDelegate.m; sourceTree = "<group>"; };
+		C784F42B1961C4C7004045DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C784F42D1961C4C7004045DC /* KTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTViewController.h; sourceTree = "<group>"; };
+		C784F42E1961C4C7004045DC /* KTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTViewController.m; sourceTree = "<group>"; };
+		C784F4301961C4C7004045DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C784F4361961C4C7004045DC /* UrbnTumblrChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrbnTumblrChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C784F4371961C4C7004045DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C784F43F1961C4C7004045DC /* UrbnTumblrChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UrbnTumblrChallengeTests-Info.plist"; sourceTree = "<group>"; };
+		C784F4411961C4C7004045DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C784F44D1961C6D1004045DC /* KTDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTDataLoader.h; sourceTree = "<group>"; };
+		C784F44E1961C6D1004045DC /* KTDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTDataLoader.m; sourceTree = "<group>"; };
+		C797AECF196504E50009FE0F /* KTPostStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPostStore.h; sourceTree = "<group>"; };
+		C797AED0196504E50009FE0F /* KTPostStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPostStore.m; sourceTree = "<group>"; };
+		C7985D381967063C0056F0A1 /* KTStoreTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTStoreTester.m; sourceTree = "<group>"; };
+		C7989F13196456950096B741 /* KTPostCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPostCVC.h; sourceTree = "<group>"; };
+		C7989F14196456950096B741 /* KTPostCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPostCVC.m; sourceTree = "<group>"; };
+		C798D2E81965DE1C0083B2B1 /* reload-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload-75.png"; sourceTree = "<group>"; };
+		C798D2EB196655B20083B2B1 /* PostModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostModel.xcdatamodel; sourceTree = "<group>"; };
+		C798D2F41966768A0083B2B1 /* PostModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PostModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		C7AB06971964990B00473E24 /* KTSearchResultsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSearchResultsVC.h; sourceTree = "<group>"; };
+		C7AB06981964990B00473E24 /* KTSearchResultsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSearchResultsVC.m; sourceTree = "<group>"; };
+		C7CB620D196DF9C80082E57F /* PostModel 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PostModel 5.xcdatamodel"; sourceTree = "<group>"; };
+		C7CB620E196DF9F40082E57F /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		C7CB620F196DF9F40082E57F /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		C7FF388A196C9CE300524D22 /* PostModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PostModel 3.xcdatamodel"; sourceTree = "<group>"; };
+		C7FF388B196C9D2000524D22 /* PostModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PostModel 4.xcdatamodel"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C784F4121961C4C7004045DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C784F41B1961C4C7004045DC /* CoreGraphics.framework in Frameworks */,
+				C784F41D1961C4C7004045DC /* UIKit.framework in Frameworks */,
+				C784F4191961C4C7004045DC /* Foundation.framework in Frameworks */,
+				D86717A961C441BBA34BF5BD /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C784F4331961C4C7004045DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C784F4381961C4C7004045DC /* XCTest.framework in Frameworks */,
+				C784F43A1961C4C7004045DC /* UIKit.framework in Frameworks */,
+				C784F4391961C4C7004045DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C784F40C1961C4C7004045DC = {
+			isa = PBXGroup;
+			children = (
+				C784F41E1961C4C7004045DC /* UrbnTumblrChallenge */,
+				C784F43D1961C4C7004045DC /* UrbnTumblrChallengeTests */,
+				C784F4171961C4C7004045DC /* Frameworks */,
+				C784F4161961C4C7004045DC /* Products */,
+				A3EECF7E3C584CEDB8DDE87D /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		C784F4161961C4C7004045DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C784F4151961C4C7004045DC /* UrbnTumblrChallenge.app */,
+				C784F4361961C4C7004045DC /* UrbnTumblrChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C784F4171961C4C7004045DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C784F4181961C4C7004045DC /* Foundation.framework */,
+				C784F41A1961C4C7004045DC /* CoreGraphics.framework */,
+				C784F41C1961C4C7004045DC /* UIKit.framework */,
+				C784F4371961C4C7004045DC /* XCTest.framework */,
+				50D6898003DD478C942353C6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C784F41E1961C4C7004045DC /* UrbnTumblrChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				C7989F16196467920096B741 /* CollectionView */,
+				C784F4271961C4C7004045DC /* KTAppDelegate.h */,
+				C784F4281961C4C7004045DC /* KTAppDelegate.m */,
+				C784F42A1961C4C7004045DC /* Main.storyboard */,
+				C784F42D1961C4C7004045DC /* KTViewController.h */,
+				C784F42E1961C4C7004045DC /* KTViewController.m */,
+				C784F44D1961C6D1004045DC /* KTDataLoader.h */,
+				C784F44E1961C6D1004045DC /* KTDataLoader.m */,
+				C784F4301961C4C7004045DC /* Images.xcassets */,
+				C784F41F1961C4C7004045DC /* Supporting Files */,
+				C7AB06971964990B00473E24 /* KTSearchResultsVC.h */,
+				C7AB06981964990B00473E24 /* KTSearchResultsVC.m */,
+				C797AECF196504E50009FE0F /* KTPostStore.h */,
+				C797AED0196504E50009FE0F /* KTPostStore.m */,
+				C798D2EA196655B20083B2B1 /* PostModel.xcdatamodeld */,
+				C7CB620E196DF9F40082E57F /* Post.h */,
+				C7CB620F196DF9F40082E57F /* Post.m */,
+			);
+			path = UrbnTumblrChallenge;
+			sourceTree = "<group>";
+		};
+		C784F41F1961C4C7004045DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C798D2E81965DE1C0083B2B1 /* reload-75.png */,
+				C784F4201961C4C7004045DC /* UrbnTumblrChallenge-Info.plist */,
+				C784F4211961C4C7004045DC /* InfoPlist.strings */,
+				C784F4241961C4C7004045DC /* main.m */,
+				C784F4261961C4C7004045DC /* UrbnTumblrChallenge-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C784F43D1961C4C7004045DC /* UrbnTumblrChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C784F43E1961C4C7004045DC /* Supporting Files */,
+				C7985D381967063C0056F0A1 /* KTStoreTester.m */,
+			);
+			path = UrbnTumblrChallengeTests;
+			sourceTree = "<group>";
+		};
+		C784F43E1961C4C7004045DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C784F43F1961C4C7004045DC /* UrbnTumblrChallengeTests-Info.plist */,
+				C784F4401961C4C7004045DC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7989F16196467920096B741 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C7989F13196456950096B741 /* KTPostCVC.h */,
+				C7989F14196456950096B741 /* KTPostCVC.m */,
+				C7430CB119634621005B0B99 /* KTPostCell.h */,
+				C7430CB219634621005B0B99 /* KTPostCell.m */,
+				C77F86B419817B48005694D6 /* KTFlowLayOut.h */,
+				C77F86B519817B48005694D6 /* KTFlowLayOut.m */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C784F4141961C4C7004045DC /* UrbnTumblrChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C784F4471961C4C8004045DC /* Build configuration list for PBXNativeTarget "UrbnTumblrChallenge" */;
+			buildPhases = (
+				89ABBEDB75C84A2C9010316E /* Check Pods Manifest.lock */,
+				C784F4111961C4C7004045DC /* Sources */,
+				C784F4121961C4C7004045DC /* Frameworks */,
+				C784F4131961C4C7004045DC /* Resources */,
+				7C950C91DA0A4FA6A8C57930 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UrbnTumblrChallenge;
+			productName = UrbnTumblrChallenge;
+			productReference = C784F4151961C4C7004045DC /* UrbnTumblrChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C784F4351961C4C7004045DC /* UrbnTumblrChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C784F44A1961C4C8004045DC /* Build configuration list for PBXNativeTarget "UrbnTumblrChallengeTests" */;
+			buildPhases = (
+				C784F4321961C4C7004045DC /* Sources */,
+				C784F4331961C4C7004045DC /* Frameworks */,
+				C784F4341961C4C7004045DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C784F43C1961C4C7004045DC /* PBXTargetDependency */,
+			);
+			name = UrbnTumblrChallengeTests;
+			productName = UrbnTumblrChallengeTests;
+			productReference = C784F4361961C4C7004045DC /* UrbnTumblrChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C784F40D1961C4C7004045DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Taniguchi;
+				TargetAttributes = {
+					C784F4351961C4C7004045DC = {
+						TestTargetID = C784F4141961C4C7004045DC;
+					};
+				};
+			};
+			buildConfigurationList = C784F4101961C4C7004045DC /* Build configuration list for PBXProject "UrbnTumblrChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C784F40C1961C4C7004045DC;
+			productRefGroup = C784F4161961C4C7004045DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C784F4141961C4C7004045DC /* UrbnTumblrChallenge */,
+				C784F4351961C4C7004045DC /* UrbnTumblrChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C784F4131961C4C7004045DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C798D2E91965DE1C0083B2B1 /* reload-75.png in Resources */,
+				C784F4311961C4C7004045DC /* Images.xcassets in Resources */,
+				C784F4231961C4C7004045DC /* InfoPlist.strings in Resources */,
+				C784F42C1961C4C7004045DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C784F4341961C4C7004045DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C784F4421961C4C7004045DC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C950C91DA0A4FA6A8C57930 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89ABBEDB75C84A2C9010316E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C784F4111961C4C7004045DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7430CB319634621005B0B99 /* KTPostCell.m in Sources */,
+				C7AB06991964990B00473E24 /* KTSearchResultsVC.m in Sources */,
+				C797AED1196504E50009FE0F /* KTPostStore.m in Sources */,
+				C7989F15196456950096B741 /* KTPostCVC.m in Sources */,
+				C784F42F1961C4C7004045DC /* KTViewController.m in Sources */,
+				C7CB6210196DF9F40082E57F /* Post.m in Sources */,
+				C77F86B619817B48005694D6 /* KTFlowLayOut.m in Sources */,
+				C784F44F1961C6D1004045DC /* KTDataLoader.m in Sources */,
+				C784F4251961C4C7004045DC /* main.m in Sources */,
+				C798D2EC196655B20083B2B1 /* PostModel.xcdatamodeld in Sources */,
+				C784F4291961C4C7004045DC /* KTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C784F4321961C4C7004045DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7985D391967063C0056F0A1 /* KTStoreTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C784F43C1961C4C7004045DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C784F4141961C4C7004045DC /* UrbnTumblrChallenge */;
+			targetProxy = C784F43B1961C4C7004045DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C784F4211961C4C7004045DC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C784F4221961C4C7004045DC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C784F42A1961C4C7004045DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C784F42B1961C4C7004045DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C784F4401961C4C7004045DC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C784F4411961C4C7004045DC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C784F4451961C4C8004045DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C784F4461961C4C8004045DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C784F4481961C4C8004045DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3EECF7E3C584CEDB8DDE87D /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UrbnTumblrChallenge/UrbnTumblrChallenge-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
+				INFOPLIST_FILE = "UrbnTumblrChallenge/UrbnTumblrChallenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C784F4491961C4C8004045DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3EECF7E3C584CEDB8DDE87D /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UrbnTumblrChallenge/UrbnTumblrChallenge-Prefix.pch";
+				INFOPLIST_FILE = "UrbnTumblrChallenge/UrbnTumblrChallenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C784F44B1961C4C8004045DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UrbnTumblrChallenge.app/UrbnTumblrChallenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UrbnTumblrChallenge/UrbnTumblrChallenge-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "UrbnTumblrChallengeTests/UrbnTumblrChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C784F44C1961C4C8004045DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UrbnTumblrChallenge.app/UrbnTumblrChallenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UrbnTumblrChallenge/UrbnTumblrChallenge-Prefix.pch";
+				INFOPLIST_FILE = "UrbnTumblrChallengeTests/UrbnTumblrChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C784F4101961C4C7004045DC /* Build configuration list for PBXProject "UrbnTumblrChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C784F4451961C4C8004045DC /* Debug */,
+				C784F4461961C4C8004045DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C784F4471961C4C8004045DC /* Build configuration list for PBXNativeTarget "UrbnTumblrChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C784F4481961C4C8004045DC /* Debug */,
+				C784F4491961C4C8004045DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C784F44A1961C4C8004045DC /* Build configuration list for PBXNativeTarget "UrbnTumblrChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C784F44B1961C4C8004045DC /* Debug */,
+				C784F44C1961C4C8004045DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C798D2EA196655B20083B2B1 /* PostModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C798D2F41966768A0083B2B1 /* PostModel 2.xcdatamodel */,
+				C7FF388B196C9D2000524D22 /* PostModel 4.xcdatamodel */,
+				C7CB620D196DF9C80082E57F /* PostModel 5.xcdatamodel */,
+				C7FF388A196C9CE300524D22 /* PostModel 3.xcdatamodel */,
+				C798D2EB196655B20083B2B1 /* PostModel.xcdatamodel */,
+			);
+			currentVersion = C7CB620D196DF9C80082E57F /* PostModel 5.xcdatamodel */;
+			path = PostModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C784F40D1961C4C7004045DC /* Project object */;
+}
