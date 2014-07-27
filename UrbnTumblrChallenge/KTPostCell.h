@@ -17,6 +17,7 @@
 
 @interface KTPostCell : UICollectionViewCell
 @property (strong, nonatomic) id<KTPostCellDelegate>delegate;
+@property (strong, nonatomic) UIColor *color;
 @property (strong, nonatomic) IBOutlet UITextView *slugTextView;
 @property (strong, nonatomic) IBOutlet UIImageView *postImagesView;
 @property (strong, nonatomic) IBOutlet UITextView *captionTextView;

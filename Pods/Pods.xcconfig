@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CCInfiniteScrolling" "${PODS_ROOT}/Headers/DProperty" "${PODS_ROOT}/Headers/JRSwizzle" "${PODS_ROOT}/Headers/MRProgress" "${PODS_ROOT}/Headers/UIView+TKGeometry"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/CCInfiniteScrolling" -isystem "${PODS_ROOT}/Headers/DProperty" -isystem "${PODS_ROOT}/Headers/JRSwizzle" -isystem "${PODS_ROOT}/Headers/MRProgress" -isystem "${PODS_ROOT}/Headers/UIView+TKGeometry"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CCInfiniteScrolling" "${PODS_ROOT}/Headers/DProperty" "${PODS_ROOT}/Headers/JRSwizzle" "${PODS_ROOT}/Headers/MRProgress" "${PODS_ROOT}/Headers/TGLStackedViewController" "${PODS_ROOT}/Headers/UIView+TKGeometry"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/CCInfiniteScrolling" -isystem "${PODS_ROOT}/Headers/DProperty" -isystem "${PODS_ROOT}/Headers/JRSwizzle" -isystem "${PODS_ROOT}/Headers/MRProgress" -isystem "${PODS_ROOT}/Headers/TGLStackedViewController" -isystem "${PODS_ROOT}/Headers/UIView+TKGeometry"
 OTHER_LDFLAGS = -ObjC -framework Accelerate -framework CoreGraphics -framework Foundation -framework QuartzCore -framework UIKit
 PODS_ROOT = ${SRCROOT}/Pods

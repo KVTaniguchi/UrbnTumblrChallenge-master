@@ -1,5 +1,5 @@
 #include "Pods-MRProgress.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/MRProgress" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CCInfiniteScrolling" "${PODS_ROOT}/Headers/DProperty" "${PODS_ROOT}/Headers/JRSwizzle" "${PODS_ROOT}/Headers/MRProgress" "${PODS_ROOT}/Headers/UIView+TKGeometry"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/MRProgress" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CCInfiniteScrolling" "${PODS_ROOT}/Headers/DProperty" "${PODS_ROOT}/Headers/JRSwizzle" "${PODS_ROOT}/Headers/MRProgress" "${PODS_ROOT}/Headers/TGLStackedViewController" "${PODS_ROOT}/Headers/UIView+TKGeometry"
 OTHER_LDFLAGS = -ObjC ${PODS_MRPROGRESS_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}

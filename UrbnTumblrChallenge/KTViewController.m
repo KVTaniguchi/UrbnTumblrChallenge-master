@@ -36,6 +36,7 @@
 @property (strong, nonatomic) KTSearchResultsVC *searchResultsVC;
 @property (strong, nonatomic) UIView *fakeTransitionView;
 @property (strong, nonatomic) MRActivityIndicatorView *progressView;
+@property (strong, nonatomic) NSMutableArray *posts;
 @end
 
 @implementation KTViewController
@@ -141,27 +142,30 @@
 }
 
 -(void)createCollectionView{
-    UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
-    flowLayout.minimumLineSpacing = .10;
-    flowLayout.minimumInteritemSpacing = .10;
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    flowLayout.sectionInset = UIEdgeInsetsZero;
     postsCVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"KTPostCVC"];
- //   [postsCVC.collectionView setCollectionViewLayout:flowLayout];
+    
+//    UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
+//    flowLayout.minimumLineSpacing = .10;
+//    flowLayout.minimumInteritemSpacing = .10;
+//    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+//    flowLayout.sectionInset = UIEdgeInsetsZero;
+//    
+//    [postsCVC.collectionView setCollectionViewLayout:flowLayout];
 
     
-    KTFlowLayout *myFlowLayout = [KTFlowLayout new];
-    myFlowLayout.minimumLineSpacing = 0.1;
-    myFlowLayout.minimumInteritemSpacing = 0.1;
-    [myFlowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    myFlowLayout.sectionInset = UIEdgeInsetsZero;
-    [postsCVC.collectionView setCollectionViewLayout:myFlowLayout];
+//    KTFlowLayout *myFlowLayout = [KTFlowLayout new];
+//    myFlowLayout.minimumLineSpacing = 0.1;
+//    myFlowLayout.minimumInteritemSpacing = 0.1;
+//    [myFlowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+//    myFlowLayout.sectionInset = UIEdgeInsetsZero;
+//    [postsCVC.collectionView setCollectionViewLayout:myFlowLayout];
+    
     
     [postsCVC setReblogDelegate:self];
-    [postsCVC.collectionView setDelegate:self];
+//    [postsCVC.collectionView setDelegate:self];
     [postsCVC.collectionView setPagingEnabled:NO];
     [postsCVC.collectionView setUserInteractionEnabled:YES];
-    [postsCVC.collectionView setDataSource:postsCVC];
+//    [postsCVC.collectionView setDataSource:postsCVC];
     [postsCVC.collectionView setBackgroundColor:[UIColor yellowColor]];
     [postsCVC.view setBackgroundColor:[UIColor redColor]];
     [postsCVC.view setFrame:CGRectMake(0, 0, _postCVCContainerView.frame.size.width, _postCVCContainerView.frame.size.height)];
@@ -169,40 +173,45 @@
     [_postCVCContainerView addSubview:postsCVC.view];
 }
 
-
-
--(CGSize)collectionView:(KTPostCVC *)collectionView layout:(KTFlowLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSInteger index = indexPath.row;
-    
-    double height = 0.0;
-
-    Post *p = [postsCVC.fetchedPostsForUser objectAtIndex:index];
-    NSLog(@" %@ height start at %f", p.slug, height);
-    // if no picture, adjust the cell to be containerview.y - the picture height is 165
-    if (p.image) {
-        //
-        height += 165.0f;
-        NSLog(@" %@ height IMAGE ADD is %f", p.slug, height);
+-(NSMutableArray*)posts{
+    if (!self.posts) {
+        self.posts = [NSMutableArray arrayWithArray:postsCVC.fetchedPostsForUser];
     }
-    // if no caption, adjust the cell to be containerview - the caption height is 188
-    if (p.caption) {
-        NSString *caption = p.caption;
-        NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[caption dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
-        CGSize expectedSize = [attributedString size];
-        height += expectedSize.height * expectedSize.width / 320;
-        NSLog(@"for %@ add caption h: %f", p.slug, expectedSize.height * expectedSize.width / 320);
-    }
-    if (p.slug) {
-        height += 54.0f;
-        NSLog(@"%@ slug add height is: %f", p.slug, height);
-    }
-    
-    NSLog(@"for %@ height is: %f", p.slug, height);
-    NSLog(@"************");
-
-    return CGSizeMake(320, height);
+    return self.posts;
 }
+
+//-(CGSize)collectionView:(KTPostCVC *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    NSInteger index = indexPath.row;
+//    
+//    double height = 0.0;
+//
+//    Post *p = [postsCVC.fetchedPostsForUser objectAtIndex:index];
+//    NSLog(@" %@ height start at %f", p.slug, height);
+//    // if no picture, adjust the cell to be containerview.y - the picture height is 165
+//    if (p.image) {
+//        //
+//        height += 165.0f;
+//        NSLog(@" %@ height IMAGE ADD is %f", p.slug, height);
+//    }
+//    // if no caption, adjust the cell to be containerview - the caption height is 188
+//    if (p.caption) {
+//        NSString *caption = p.caption;
+//        NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[caption dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+//        CGSize expectedSize = [attributedString size];
+//        height += expectedSize.height * expectedSize.width / 320;
+//        NSLog(@"for %@ add caption h: %f", p.slug, expectedSize.height * expectedSize.width / 320);
+//    }
+//    if (p.slug) {
+//        height += 54.0f;
+//        NSLog(@"%@ slug add height is: %f", p.slug, height);
+//    }
+//    
+//    NSLog(@"for %@ height is: %f", p.slug, height);
+//    NSLog(@"************");
+//
+//    return CGSizeMake(320, height);
+//}
 
 
 -(void)finishedDownloadingPosts{

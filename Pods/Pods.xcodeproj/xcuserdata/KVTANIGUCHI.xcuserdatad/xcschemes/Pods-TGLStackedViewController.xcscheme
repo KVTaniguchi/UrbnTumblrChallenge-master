@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "962FDCFDB4994F2BBFB8F017"
-               BuildableName = "libPods-MRProgress.a"
-               BlueprintName = "Pods-MRProgress"
+               BlueprintIdentifier = "40926F037F9E4D06B059E265"
+               BuildableName = "libPods-TGLStackedViewController.a"
+               BlueprintName = "Pods-TGLStackedViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

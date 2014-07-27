@@ -36,17 +36,20 @@ PODS:
   - MRProgress/Stopable (0.5.1):
     - MRProgress/Helper
   - MRProgress/WeakProxy (0.5.1)
+  - TGLStackedViewController (1.0.1)
   - UIView+TKGeometry (0.2)
 
 DEPENDENCIES:
   - CCInfiniteScrolling (~> 0.1)
   - MRProgress (~> 0.5)
+  - TGLStackedViewController (~> 1.0)
 
 SPEC CHECKSUMS:
   CCInfiniteScrolling: 720f0e5ec7d0689b793b2959a9aa283d78ed88bb
   DProperty: 2a0f2a805ca6b1528262efa964baaca1a444defd
   JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
   MRProgress: 7853c177e7d79b90e6f0910561967ebcf3289eb1
+  TGLStackedViewController: 856fbc83b73ec0c0487e7febfc9ddad349a56660
   UIView+TKGeometry: 60a88dcf2af8420175cb1c789a02d6254ebb89a7
 
 COCOAPODS: 0.33.1

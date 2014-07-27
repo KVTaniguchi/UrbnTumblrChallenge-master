@@ -11,6 +11,7 @@
 #import "KTPostCell.h"
 #import <UIScrollView+infiniteScrolling.h>
 #import <CCInfiniteScrolling/UIScrollView+infiniteScrolling.h>
+#import <TGLStackedViewController/TGLStackedViewController.h>
 
 @protocol KTPostCVCDelegate <NSObject>
 
@@ -18,7 +19,7 @@
 -(void)rebloggerLoad:(NSString*)rebloggerName;
 @end
 
-@interface KTPostCVC : UICollectionViewController <KTDataloaderDelegate, KTPostCellDelegate>
+@interface KTPostCVC : TGLStackedViewController <KTDataloaderDelegate, KTPostCellDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong) id<KTPostCVCDelegate>reblogDelegate;
 @property (nonatomic,strong) NSNumber *numberOfPostsToShow;
 @property (nonatomic, strong) NSArray *fetchedPostsForUser;

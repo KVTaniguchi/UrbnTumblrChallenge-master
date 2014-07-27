@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-TGLStackedViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-UIView+TKGeometry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,57 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>02DC83B9CB9A4F239FE823D7</key>
+		<key>0890D15B0CF54806889748F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C71AA7E82FA45499B0B20CD</key>
+		<key>40926F037F9E4D06B059E265</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6BE739836A194699B50CC40F</key>
+		<key>45CDD2D903924537A3AE3992</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D4F2BF9123849F490041B6A</key>
+		<key>545E4DDFAE7E48A8BF9AFBDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DC8CE8AE32B4251B3239F04</key>
+		<key>962FDCFDB4994F2BBFB8F017</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0E237A5478A4A169A813C6F</key>
+		<key>B54140919FE84E7DA56F292F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6926D2095514606A86CA3AC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E3A50B8C9FB14AFB86D24384</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EF9B61C096F84C9AB2D7EF68</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F14F6760B9B74022B98BE685</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8D370B60AC04B12AC66FD8B</key>
+		<key>F072DEE83B62451B9DA41AA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -160,7 +160,7 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3Z-98-Ass">
-                                            <rect key="frame" x="58" y="57" width="165" height="165"/>
+                                            <rect key="frame" x="0.0" y="57" width="165" height="165"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="drj-tk-RoX">
@@ -209,6 +209,7 @@
                         </cells>
                         <connections>
                             <outlet property="dataSource" destination="44C-MY-ABq" id="Yz5-ml-xiK"/>
+                            <outlet property="delegate" destination="44C-MY-ABq" id="gnN-B7-kez"/>
                         </connections>
                     </collectionView>
                 </collectionViewController>

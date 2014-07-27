@@ -90,6 +90,12 @@
 #define COCOAPODS_VERSION_MINOR_MRProgress_WeakProxy 5
 #define COCOAPODS_VERSION_PATCH_MRProgress_WeakProxy 1
 
+// TGLStackedViewController
+#define COCOAPODS_POD_AVAILABLE_TGLStackedViewController
+#define COCOAPODS_VERSION_MAJOR_TGLStackedViewController 1
+#define COCOAPODS_VERSION_MINOR_TGLStackedViewController 0
+#define COCOAPODS_VERSION_PATCH_TGLStackedViewController 1
+
 // UIView+TKGeometry
 #define COCOAPODS_POD_AVAILABLE_UIView_TKGeometry
 #define COCOAPODS_VERSION_MAJOR_UIView_TKGeometry 0
