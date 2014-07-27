@@ -21,6 +21,7 @@
 #import "KTPostCVC.h"
 #import "KTPostStore.h"
 #import <MRProgress/MRProgress.h>
+#import "KTFlowLayout.h"
 
 @interface KTViewController (){
     KTPostCVC *postsCVC;
@@ -142,9 +143,20 @@
 -(void)createCollectionView{
     UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
     flowLayout.minimumLineSpacing = .10;
+    flowLayout.minimumInteritemSpacing = .10;
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    flowLayout.sectionInset = UIEdgeInsetsZero;
     postsCVC = [[self storyboard]instantiateViewControllerWithIdentifier:@"KTPostCVC"];
-    [postsCVC.collectionView setCollectionViewLayout:flowLayout];
+ //   [postsCVC.collectionView setCollectionViewLayout:flowLayout];
+
+    
+    KTFlowLayout *myFlowLayout = [KTFlowLayout new];
+    myFlowLayout.minimumLineSpacing = 0.1;
+    myFlowLayout.minimumInteritemSpacing = 0.1;
+    [myFlowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    myFlowLayout.sectionInset = UIEdgeInsetsZero;
+    [postsCVC.collectionView setCollectionViewLayout:myFlowLayout];
+    
     [postsCVC setReblogDelegate:self];
     [postsCVC.collectionView setDelegate:self];
     [postsCVC.collectionView setPagingEnabled:NO];
@@ -157,35 +169,41 @@
     [_postCVCContainerView addSubview:postsCVC.view];
 }
 
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
- //// the size depends on the item at the index path
-    // the get the item at the index path via the array you are passing the collection view
-    // which is: postCVC.fetchedPostsForUser
-    //
+
+
+-(CGSize)collectionView:(KTPostCVC *)collectionView layout:(KTFlowLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     NSInteger index = indexPath.row;
     
-    double height = 414.0;
-    
+    double height = 0.0;
+
     Post *p = [postsCVC.fetchedPostsForUser objectAtIndex:index];
-    // postCVCContainerView.frame.size is 320 x 414 height
+    NSLog(@" %@ height start at %f", p.slug, height);
     // if no picture, adjust the cell to be containerview.y - the picture height is 165
-    if (!p.image) {
+    if (p.image) {
         //
-        NSLog(@"flowlayout resizing image for %@", p.slug);
-        height = height - 165;
+        height += 165.0f;
+        NSLog(@" %@ height IMAGE ADD is %f", p.slug, height);
     }
     // if no caption, adjust the cell to be containerview - the caption height is 188
-    if (!p.caption) {
-        NSLog(@"flowlayout resizing caption for %@", p.slug);
-        height = height - 188;
+    if (p.caption) {
+        NSString *caption = p.caption;
+        NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[caption dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+        CGSize expectedSize = [attributedString size];
+        height += expectedSize.height * expectedSize.width / 320;
+        NSLog(@"for %@ add caption h: %f", p.slug, expectedSize.height * expectedSize.width / 320);
     }
-    // will accessing the cell make a difference?
+    if (p.slug) {
+        height += 54.0f;
+        NSLog(@"%@ slug add height is: %f", p.slug, height);
+    }
     
-//    KTPostCell *cell = (KTPostCell*)[postsCVC.collectionView cellForItemAtIndexPath:indexPath];
-    
+    NSLog(@"for %@ height is: %f", p.slug, height);
+    NSLog(@"************");
+
     return CGSizeMake(320, height);
 }
+
 
 -(void)finishedDownloadingPosts{
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -270,11 +288,13 @@
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    NSIndexPath *indexOfTopItem = [NSIndexPath indexPathForItem:0 inSection:0];
+    NSIndexPath *indexOfTopItem = [NSIndexPath indexPathForItem:1 inSection:0];
     __weak typeof (KTPostCVC) *weakCVC = postsCVC;
     [postsCVC.collectionView addBottomInfiniteScrollingWithActionHandler:^{
+        
+        //  redo this action with something else
         [weakCVC.collectionView scrollToItemAtIndexPath:indexOfTopItem atScrollPosition:UICollectionViewScrollPositionTop animated:NO];
-        [weakCVC.collectionView reloadData];
+//        [weakCVC.collectionView reloadData];
     }];
 }
 

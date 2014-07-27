@@ -33,8 +33,8 @@
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     KTPostCell *postCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"postCell" forIndexPath:indexPath];
     postCell.delegate = self;
-    postCell.postImagesView.layer.shouldRasterize = YES;
-    postCell.postImagesView.layer.rasterizationScale = [UIScreen mainScreen].scale;
+//    postCell.postImagesView.layer.shouldRasterize = YES;
+//    postCell.postImagesView.layer.rasterizationScale = [UIScreen mainScreen].scale;
     Post *fetchedPost = [self.fetchedPostsForUser objectAtIndex:indexPath.row];
     NSLog(@"slug: %@", fetchedPost.slug);
     // size to fit
@@ -48,7 +48,13 @@
         postCell.captionTextView.attributedText = attributedString;
 
         CGSize expectedCaptionSize = [attributedString size];
-        postCell.captionTextView.frame = CGRectMake(0, 188, expectedCaptionSize.width, expectedCaptionSize.height);
+        NSLog(@"expected caption size: %f %f", expectedCaptionSize.width, expectedCaptionSize.height);
+        double height = expectedCaptionSize.height * expectedCaptionSize.width / 320;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            postCell.captionTextView.frame = CGRectMake(0, 230, 320, height);
+            [postCell.captionTextView sizeToFit];
+        });
+
     }else{
         NSLog(@"no caption, adjust the cell");
         postCell.captionTextView.frame = CGRectZero;
@@ -59,7 +65,10 @@
     }else{
         postCell.postImagesView.image = nil;
         NSLog(@"no image, adjust the cell");
-        postCell.postImagesView.frame = CGRectZero;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            postCell.postImagesView.frame = CGRectZero;
+            postCell.captionTextView.frame = CGRectMake(0, 57, 320, 188);
+        });
     }
     if (fetchedPost.body) {
         NSString *caption = fetchedPost.body;
@@ -70,6 +79,10 @@
     }
     if (fetchedPost.slug) {
         postCell.slugTextView.text = fetchedPost.slug;
+    }else{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            postCell.slugTextView.frame = CGRectZero;
+        });
     }
     if (fetchedPost.rebloggerName) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -93,12 +106,13 @@
         });
 
     }else{
+        NSLog(@"no reblogger");
         [postCell.rebloggerNameLabel setHidden:YES];
         [postCell.rebloggedLabel setHidden:YES];
         [postCell.rebloggerAvatarImage setHidden:YES];
-        [postCell.postImagesView setFrame:CGRectMake(58, 57, 165, 165)];
+//        [postCell.postImagesView setFrame:CGRectMake(58, 57, 165, 165)];
     }
-    NSLog(@"***********************");
+    NSLog(@"********** postCell dims: w: %f  h: %f", postCell.frame.size.width, postCell.frame.size.height);
     return postCell;
 }
 

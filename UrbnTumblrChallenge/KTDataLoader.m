@@ -97,10 +97,10 @@
 -(void)parseJSON:(NSDictionary*)json{
     NSDictionary *response = [json objectForKey:@"response"];
     _posts = [response objectForKey:@"posts"];
-    for (NSDictionary *dict in _posts){
+//    for (NSDictionary *dict in _posts){
 //       NSLog(@"date: %@", [dict objectForKey:@"date"]);
 //        NSLog(@"timestamp: %@", [dict objectForKey:@"timestamp"]);
-    }
+//    }
 //    NSLog(@"posts: %@", _posts.debugDescription);
     for (NSInteger x = 0; x < _posts.count; x++) {
         [[KTPostStore sharedStore]setPosts:[_posts objectAtIndex:x] withSequence:x];
