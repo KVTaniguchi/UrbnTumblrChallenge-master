@@ -19,7 +19,7 @@
 -(void)rebloggerLoad:(NSString*)rebloggerName;
 @end
 
-@interface KTPostCVC : TGLStackedViewController <KTDataloaderDelegate, KTPostCellDelegate>
+@interface KTPostCVC : UICollectionViewController <KTDataloaderDelegate, KTPostCellDelegate>
 @property (nonatomic,strong) id<KTPostCVCDelegate>reblogDelegate;
 @property (nonatomic,strong) NSNumber *numberOfPostsToShow;
 @property (nonatomic, strong) NSArray *fetchedPostsForUser;

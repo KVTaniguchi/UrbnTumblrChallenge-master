@@ -210,7 +210,6 @@
                         </cells>
                         <connections>
                             <outlet property="dataSource" destination="44C-MY-ABq" id="Yz5-ml-xiK"/>
-                            <outlet property="delegate" destination="44C-MY-ABq" id="gnN-B7-kez"/>
                         </connections>
                     </collectionView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

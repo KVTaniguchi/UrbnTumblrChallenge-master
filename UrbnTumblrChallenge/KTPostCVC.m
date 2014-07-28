@@ -48,24 +48,24 @@
     _dataLoader = [KTDataLoader new];
     [_dataLoader makeSession];
     _dataLoader.completionDelegate = self;
-    // Set to NO to prevent a small number
-    // of cards from filling the entire
-    // view height evenly and only show
-    // their -topReveal amount
-    //
-    self.stackedLayout.fillHeight = YES;
-    
-    // Set to NO to prevent a small number
-    // of cards from being scrollable and
-    // bounce
-    //
-    self.stackedLayout.alwaysBounce = YES;
-    
-    // Set to NO to prevent unexposed
-    // items at top and bottom from
-    // being selectable
-    //
-    self.unexposedItemsAreSelectable = YES;
+//    // Set to NO to prevent a small number
+//    // of cards from filling the entire
+//    // view height evenly and only show
+//    // their -topReveal amount
+//    //
+//    self.stackedLayout.fillHeight = YES;
+//    
+//    // Set to NO to prevent a small number
+//    // of cards from being scrollable and
+//    // bounce
+//    //
+//    self.stackedLayout.alwaysBounce = YES;
+//    
+//    // Set to NO to prevent unexposed
+//    // items at top and bottom from
+//    // being selectable
+//    //
+//    self.unexposedItemsAreSelectable = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,8 +78,8 @@
     postCell.delegate = self;
     postCell.color = [UIColor randomColor];
     
-//    postCell.postImagesView.layer.shouldRasterize = YES;
-//    postCell.postImagesView.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    postCell.postImagesView.layer.shouldRasterize = YES;
+    postCell.postImagesView.layer.rasterizationScale = [UIScreen mainScreen].scale;
     Post *fetchedPost = [self.fetchedPostsForUser objectAtIndex:indexPath.row];
     NSLog(@"slug: %@", fetchedPost.slug);
     [postCell.reblogLoadButton setHidden:YES];
@@ -159,49 +159,49 @@
     return 1;
 }
 
--(NSMutableArray*)posts{
-    if (!_posts) {
-        _posts = [NSMutableArray arrayWithArray:self.fetchedPostsForUser];
-    }
-    return _posts;
-}
+//-(NSMutableArray*)posts{
+//    if (!_posts) {
+//        _posts = [NSMutableArray arrayWithArray:self.fetchedPostsForUser];
+//    }
+//    return _posts;
+//}
 
--(void)moveItemAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath{
-    Post *movePost = self.fetchedPostsForUser[fromIndexPath.item];
-    [_posts removeObjectAtIndex:fromIndexPath.item];
-    [_posts insertObject:movePost atIndex:toIndexPath.item];
-}
+//-(void)moveItemAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath{
+//    Post *movePost = self.fetchedPostsForUser[fromIndexPath.item];
+//    [_posts removeObjectAtIndex:fromIndexPath.item];
+//    [_posts insertObject:movePost atIndex:toIndexPath.item];
+//}
 
--(CGFloat)setHeightOfItemForIndexPath:(NSIndexPath *)indexPath{
-        NSInteger index = indexPath.row;
-    
-        double height = 0.0;
-    
-        Post *p = [self.fetchedPostsForUser objectAtIndex:index];
-        NSLog(@" %@ height start at %f", p.slug, height);
-        // if no picture, adjust the cell to be containerview.y - the picture height is 165
-        if (p.image) {
-            //
-            height += 165.0f;
-            NSLog(@" %@ height IMAGE ADD is %f", p.slug, height);
-        }
-        // if no caption, adjust the cell to be containerview - the caption height is 188
-        if (p.caption) {
-            NSString *caption = p.caption;
-            NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[caption dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
-            CGSize expectedSize = [attributedString size];
-            height += expectedSize.height * expectedSize.width / 320;
-            NSLog(@"for %@ add caption h: %f", p.slug, expectedSize.height * expectedSize.width / 320);
-        }
-        if (p.slug) {
-            height += 54.0f;
-            NSLog(@"%@ slug add height is: %f", p.slug, height);
-        }
-    
-        NSLog(@"for %@ height is: %f", p.slug, height);
-        NSLog(@"************");
-    
-    return height;
-}
+//-(CGFloat)setHeightOfItemForIndexPath:(NSIndexPath *)indexPath{
+//        NSInteger index = indexPath.row;
+//    
+//        double height = 0.0;
+//    
+//        Post *p = [self.fetchedPostsForUser objectAtIndex:index];
+//        NSLog(@" %@ height start at %f", p.slug, height);
+//        // if no picture, adjust the cell to be containerview.y - the picture height is 165
+//        if (p.image) {
+//            //
+//            height += 165.0f;
+//            NSLog(@" %@ height IMAGE ADD is %f", p.slug, height);
+//        }
+//        // if no caption, adjust the cell to be containerview - the caption height is 188
+//        if (p.caption) {
+//            NSString *caption = p.caption;
+//            NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[caption dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+//            CGSize expectedSize = [attributedString size];
+//            height += expectedSize.height * expectedSize.width / 320;
+//            NSLog(@"for %@ add caption h: %f", p.slug, expectedSize.height * expectedSize.width / 320);
+//        }
+//        if (p.slug) {
+//            height += 54.0f;
+//            NSLog(@"%@ slug add height is: %f", p.slug, height);
+//        }
+//    
+//        NSLog(@"for %@ height is: %f", p.slug, height);
+//        NSLog(@"************");
+//    
+//    return height;
+//}
 
 @end

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C7430CB319634621005B0B99 /* KTPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7430CB219634621005B0B99 /* KTPostCell.m */; };
 		C77F86BC19831491005694D6 /* KTFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C77F86BB19831491005694D6 /* KTFlowLayout.m */; };
-		C77F86BF19849B14005694D6 /* KTStackedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C77F86BE19849B14005694D6 /* KTStackedVC.m */; };
 		C784F4191961C4C7004045DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F4181961C4C7004045DC /* Foundation.framework */; };
 		C784F41B1961C4C7004045DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F41A1961C4C7004045DC /* CoreGraphics.framework */; };
 		C784F41D1961C4C7004045DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F41C1961C4C7004045DC /* UIKit.framework */; };
@@ -51,8 +50,6 @@
 		C7430CB219634621005B0B99 /* KTPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPostCell.m; sourceTree = "<group>"; };
 		C77F86BA19831491005694D6 /* KTFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTFlowLayout.h; sourceTree = "<group>"; };
 		C77F86BB19831491005694D6 /* KTFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTFlowLayout.m; sourceTree = "<group>"; };
-		C77F86BD19849B14005694D6 /* KTStackedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTStackedVC.h; sourceTree = "<group>"; };
-		C77F86BE19849B14005694D6 /* KTStackedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTStackedVC.m; sourceTree = "<group>"; };
 		C784F4151961C4C7004045DC /* UrbnTumblrChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbnTumblrChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C784F4181961C4C7004045DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C784F41A1961C4C7004045DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -167,8 +164,6 @@
 				C798D2EA196655B20083B2B1 /* PostModel.xcdatamodeld */,
 				C7CB620E196DF9F40082E57F /* Post.h */,
 				C7CB620F196DF9F40082E57F /* Post.m */,
-				C77F86BD19849B14005694D6 /* KTStackedVC.h */,
-				C77F86BE19849B14005694D6 /* KTStackedVC.m */,
 			);
 			path = UrbnTumblrChallenge;
 			sourceTree = "<group>";
@@ -353,7 +348,6 @@
 				C7430CB319634621005B0B99 /* KTPostCell.m in Sources */,
 				C7AB06991964990B00473E24 /* KTSearchResultsVC.m in Sources */,
 				C797AED1196504E50009FE0F /* KTPostStore.m in Sources */,
-				C77F86BF19849B14005694D6 /* KTStackedVC.m in Sources */,
 				C7989F15196456950096B741 /* KTPostCVC.m in Sources */,
 				C784F42F1961C4C7004045DC /* KTViewController.m in Sources */,
 				C7CB6210196DF9F40082E57F /* Post.m in Sources */,

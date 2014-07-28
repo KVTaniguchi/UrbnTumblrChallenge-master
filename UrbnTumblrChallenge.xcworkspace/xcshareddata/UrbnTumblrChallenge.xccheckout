@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9737E9DA-4DDD-4739-A2E3-4C1FBADAFC82</string>
+	<string>03480811-C4BB-4B77-A295-F8FD16B9E517</string>
 	<key>IDESourceControlProjectName</key>
 	<string>UrbnTumblrChallenge</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>EA0CF0E7-8020-4650-B29F-45F5034C62DC</key>
-		<string>https://github.com/KVTaniguchi/UrbnTumblrChallenge.git</string>
+		<key>D99FA57D-0D69-4D0C-8205-242232A20F96</key>
+		<string>https://github.com/KVTaniguchi/UrbnTumblrChallenge-master.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>UrbnTumblrChallenge.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>EA0CF0E7-8020-4650-B29F-45F5034C62DC</key>
+		<key>D99FA57D-0D69-4D0C-8205-242232A20F96</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/KVTaniguchi/UrbnTumblrChallenge.git</string>
+	<string>https://github.com/KVTaniguchi/UrbnTumblrChallenge-master.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EA0CF0E7-8020-4650-B29F-45F5034C62DC</string>
+	<string>D99FA57D-0D69-4D0C-8205-242232A20F96</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EA0CF0E7-8020-4650-B29F-45F5034C62DC</string>
+			<string>D99FA57D-0D69-4D0C-8205-242232A20F96</string>
 			<key>IDESourceControlWCCName</key>
-			<string>UrbnTumblrChallenge</string>
+			<string>UrbnTumblrChallenge-master</string>
 		</dict>
 	</array>
 </dict>
