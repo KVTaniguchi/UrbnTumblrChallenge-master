@@ -125,7 +125,8 @@ typedef NS_ENUM(NSInteger, TGLStackedViewControllerScrollDirection) {
 #pragma mark - Accessors
 
 - (void)setExposedItemIndexPath:(NSIndexPath *)exposedItemIndexPath {
-
+// modify this to set a variable heights for items
+    
     if (![exposedItemIndexPath isEqual:_exposedItemIndexPath]) {
 
         if (exposedItemIndexPath) {
@@ -140,8 +141,12 @@ typedef NS_ENUM(NSInteger, TGLStackedViewControllerScrollDirection) {
             
             TGLExposedLayout *exposedLayout = [[TGLExposedLayout alloc] initWithExposedItemIndex:exposedItemIndexPath.item];
             
+            self.exposedItemHeight = [self setHeightOfItemForIndexPath:exposedItemIndexPath];
+            
             exposedLayout.layoutMargin = self.exposedLayoutMargin;
             exposedLayout.itemSize = self.exposedItemSize;
+            exposedLayout.contentHeight = self.exposedItemHeight;
+            exposedLayout.contentSize = CGSizeMake(320, self.exposedItemHeight);
             exposedLayout.topOverlap = self.exposedTopOverlap;
             exposedLayout.bottomOverlap = self.exposedBottomOverlap;
 
@@ -212,6 +217,7 @@ typedef NS_ENUM(NSInteger, TGLStackedViewControllerScrollDirection) {
         // the currently exposed item
         //
         self.exposedItemIndexPath = indexPath;
+        [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
     }
 }
 
@@ -249,6 +255,10 @@ typedef NS_ENUM(NSInteger, TGLStackedViewControllerScrollDirection) {
     // Overload method to update collection
     // view data source when item has been
     // dragged to another location
+}
+
+-(CGFloat)setHeightOfItemForIndexPath:(NSIndexPath *)indexPath{
+    return self.exposedItemHeight;
 }
 
 #pragma mark - Actions

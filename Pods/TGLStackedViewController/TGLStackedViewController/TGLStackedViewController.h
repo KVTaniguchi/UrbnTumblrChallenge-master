@@ -49,7 +49,8 @@
  * Default value is CGSizeZero
  */
 @property (assign, nonatomic) CGSize exposedItemSize;
-
+@property (assign, nonatomic) CGFloat exposedItemHeight;
+@property (assign, nonatomic) CGSize exposedContentSize;
 /** Amount of overlap for items above exposed item.
  *
  * Changes to this property take effect on next
@@ -124,6 +125,6 @@
  * @param fromIndexPath Original item indexPath
  * @param toIndexPath New item indexPath
  */
-- (void)moveItemAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath;
-
+-(void)moveItemAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath;
+-(CGFloat)setHeightOfItemForIndexPath:(NSIndexPath*)indexPath;
 @end

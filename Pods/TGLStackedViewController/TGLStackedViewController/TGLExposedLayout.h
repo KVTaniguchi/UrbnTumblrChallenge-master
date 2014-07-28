@@ -44,7 +44,8 @@
  * in property -layoutMargin.
  */
 @property (assign, nonatomic) CGSize itemSize;
-
+@property (assign, nonatomic) CGSize contentSize;
+@property (assign, nonatomic) CGFloat contentHeight;
 /** Amount of overlap for items above exposed item. Default 20.0 */
 @property (assign, nonatomic) CGFloat topOverlap;
 

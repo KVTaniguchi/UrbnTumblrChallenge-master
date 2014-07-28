@@ -41,10 +41,9 @@
     
     if (self) {
         
-        self.layoutMargin = UIEdgeInsetsMake(40.0, 0.0, 0.0, 0.0);
+        self.layoutMargin = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
         self.topOverlap = 20.0;
         self.bottomOverlap = 20.0;
-
         self.exposedItemIndex = exposedItemIndex;
     }
     
@@ -64,11 +63,11 @@
 }
 
 - (void)setItemSize:(CGSize)itemSize {
-    
+
     if (!CGSizeEqualToSize(itemSize, self.itemSize)) {
         
         _itemSize = itemSize;
-        
+
         [self invalidateLayout];
     }
 }
@@ -96,11 +95,12 @@
 #pragma mark - Layout computation
 
 - (CGSize)collectionViewContentSize {
-// modify this to reflect different size layouts
+// MODIFY TO REFLECT VARIABLE CONTENT SIZE
     CGSize contentSize = self.collectionView.bounds.size;
     
-    contentSize.height -= self.collectionView.contentInset.top + self.collectionView.contentInset.bottom;
-    
+//    contentSize.height -= self.collectionView.contentInset.top + self.collectionView.contentInset.bottom;
+    contentSize.height = self.contentHeight;
+    NSLog(@"content height is: %f", contentSize.height);
     return contentSize;
 }
 
@@ -109,8 +109,9 @@
     CGSize itemSize = self.itemSize;
     
     if (CGSizeEqualToSize(itemSize, CGSizeZero)) {
-        
+        // MODIFY TO REFEFLCT DIFFERETN CONTENT SIZE
         itemSize = CGSizeMake(CGRectGetWidth(self.collectionView.bounds) - self.layoutMargin.left - self.layoutMargin.right, CGRectGetHeight(self.collectionView.bounds) - self.layoutMargin.top - self.layoutMargin.bottom - self.collectionView.contentInset.top - self.collectionView.contentInset.bottom);
+        itemSize = self.contentSize;
     }
 
     NSMutableDictionary *layoutAttributes = [NSMutableDictionary dictionary];
@@ -132,6 +133,8 @@
             
             // Exposed item
             //
+            NSLog(@"exposed item");
+        
             attributes.frame = CGRectMake(self.layoutMargin.left, self.layoutMargin.top, itemSize.width, itemSize.height);
 
         } else if (item > self.exposedItemIndex + 1) {

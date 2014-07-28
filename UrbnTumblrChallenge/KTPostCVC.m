@@ -9,7 +9,7 @@
 #import "KTPostCVC.h"
 #import "KTPostStore.h"
 #import "KTDataLoader.h"
-
+#import <TGLExposedLayout.h>
 
 @interface UIColor (randomColor)
 
@@ -53,7 +53,7 @@
     // view height evenly and only show
     // their -topReveal amount
     //
-    self.stackedLayout.fillHeight = NO;
+    self.stackedLayout.fillHeight = YES;
     
     // Set to NO to prevent a small number
     // of cards from being scrollable and
@@ -82,10 +82,6 @@
 //    postCell.postImagesView.layer.rasterizationScale = [UIScreen mainScreen].scale;
     Post *fetchedPost = [self.fetchedPostsForUser objectAtIndex:indexPath.row];
     NSLog(@"slug: %@", fetchedPost.slug);
-    // size to fit
-    // intrinsicContentSize
-    /// find a way to get data on the sizes of items within the post cell
-    
     [postCell.reblogLoadButton setHidden:YES];
     if (fetchedPost.caption) {
         NSString *caption = fetchedPost.caption;
@@ -126,22 +122,19 @@
     }
     if (fetchedPost.rebloggerName) {
         dispatch_async(dispatch_get_main_queue(), ^{
-                [postCell.reblogLoadButton setHidden:NO];
-            [UIView animateWithDuration:0.5 animations:^{
-                [postCell.postImagesView setFrame:CGRectMake(0, 57, 165, 165)];
-            } completion:^(BOOL finished) {
-                [postCell.rebloggedLabel setHidden:NO];
-                [postCell.rebloggerNameLabel setHidden:NO];
-                [postCell.rebloggerAvatarImage setHidden:NO];
-                NSString *reblogger = fetchedPost.rebloggerName;
-                postCell.rebloggerNameLabel.text = reblogger;
-                [_dataLoader grabReblogAvatarForUser:reblogger :^(BOOL completed) {
-                    if (completed) {
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            postCell.rebloggerAvatarImage.image = _dataLoader.downloadedImage;
-                        });
-                    }
-                }];
+            [postCell.reblogLoadButton setHidden:NO];
+            [postCell.postImagesView setFrame:CGRectMake(0, 57, 165, 165)];
+            [postCell.rebloggedLabel setHidden:NO];
+            [postCell.rebloggerNameLabel setHidden:NO];
+            [postCell.rebloggerAvatarImage setHidden:NO];
+            NSString *reblogger = fetchedPost.rebloggerName;
+            postCell.rebloggerNameLabel.text = reblogger;
+            [_dataLoader grabReblogAvatarForUser:reblogger :^(BOOL completed) {
+                if (completed) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        postCell.rebloggerAvatarImage.image = _dataLoader.downloadedImage;
+                    });
+                }
             }];
         });
 
@@ -151,7 +144,6 @@
         [postCell.rebloggerAvatarImage setHidden:YES];
         [postCell.postImagesView setFrame:CGRectMake(0, 57, 165, 165)];
     }
-    NSLog(@"********** postCell dims: w: %f  h: %f", postCell.frame.size.width, postCell.frame.size.height);
     return postCell;
 }
 
@@ -174,42 +166,42 @@
     return _posts;
 }
 
--(CGSize)collectionView:(KTPostCVC *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-
-    NSInteger index = indexPath.row;
-
-    double height = 0.0;
-
-    Post *p = [self.fetchedPostsForUser objectAtIndex:index];
-    NSLog(@" %@ height start at %f", p.slug, height);
-    // if no picture, adjust the cell to be containerview.y - the picture height is 165
-    if (p.image) {
-        //
-        height += 165.0f;
-        NSLog(@" %@ height IMAGE ADD is %f", p.slug, height);
-    }
-    // if no caption, adjust the cell to be containerview - the caption height is 188
-    if (p.caption) {
-        NSString *caption = p.caption;
-        NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[caption dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
-        CGSize expectedSize = [attributedString size];
-        height += expectedSize.height * expectedSize.width / 320;
-        NSLog(@"for %@ add caption h: %f", p.slug, expectedSize.height * expectedSize.width / 320);
-    }
-    if (p.slug) {
-        height += 54.0f;
-    }
-
-    NSLog(@"for %@ height is: %f", p.slug, height);
-    NSLog(@"************");
-
-    return CGSizeMake(320, height);
-}
-
 -(void)moveItemAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath{
     Post *movePost = self.fetchedPostsForUser[fromIndexPath.item];
     [_posts removeObjectAtIndex:fromIndexPath.item];
     [_posts insertObject:movePost atIndex:toIndexPath.item];
+}
+
+-(CGFloat)setHeightOfItemForIndexPath:(NSIndexPath *)indexPath{
+        NSInteger index = indexPath.row;
+    
+        double height = 0.0;
+    
+        Post *p = [self.fetchedPostsForUser objectAtIndex:index];
+        NSLog(@" %@ height start at %f", p.slug, height);
+        // if no picture, adjust the cell to be containerview.y - the picture height is 165
+        if (p.image) {
+            //
+            height += 165.0f;
+            NSLog(@" %@ height IMAGE ADD is %f", p.slug, height);
+        }
+        // if no caption, adjust the cell to be containerview - the caption height is 188
+        if (p.caption) {
+            NSString *caption = p.caption;
+            NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[caption dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+            CGSize expectedSize = [attributedString size];
+            height += expectedSize.height * expectedSize.width / 320;
+            NSLog(@"for %@ add caption h: %f", p.slug, expectedSize.height * expectedSize.width / 320);
+        }
+        if (p.slug) {
+            height += 54.0f;
+            NSLog(@"%@ slug add height is: %f", p.slug, height);
+        }
+    
+        NSLog(@"for %@ height is: %f", p.slug, height);
+        NSLog(@"************");
+    
+    return height;
 }
 
 @end
