@@ -173,11 +173,9 @@
     NSInteger index = indexPath.row;
     CGFloat height = 0.0;
     Post *p = [postsCVC.fetchedPostsForUser objectAtIndex:index];
-    // if no picture, adjust the cell to be containerview.y - the picture height is 165
     if (p.image) {
         height += 165.0f;
     }
-    // if no caption, adjust the cell to be containerview - the caption height is 188
     if (p.caption) {
         NSString *caption = p.caption;
         NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[caption dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
@@ -190,10 +188,7 @@
     if (p.slug) {
         height += 54.0f;
     }
-    
-//    NSLog(@"for %@ height is: %f", p.slug, height);
     NSLog(@"************");
-//    myFlowLayout.maxHeight += height;
     return CGSizeMake(320, height);
 }
 
