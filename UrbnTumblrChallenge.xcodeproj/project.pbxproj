@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C7430CB319634621005B0B99 /* KTPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7430CB219634621005B0B99 /* KTPostCell.m */; };
-		C77F86BC19831491005694D6 /* KTFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C77F86BB19831491005694D6 /* KTFlowLayout.m */; };
 		C784F4191961C4C7004045DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F4181961C4C7004045DC /* Foundation.framework */; };
 		C784F41B1961C4C7004045DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F41A1961C4C7004045DC /* CoreGraphics.framework */; };
 		C784F41D1961C4C7004045DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C784F41C1961C4C7004045DC /* UIKit.framework */; };
@@ -48,8 +47,6 @@
 		A3EECF7E3C584CEDB8DDE87D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C7430CB119634621005B0B99 /* KTPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPostCell.h; sourceTree = "<group>"; };
 		C7430CB219634621005B0B99 /* KTPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPostCell.m; sourceTree = "<group>"; };
-		C77F86BA19831491005694D6 /* KTFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTFlowLayout.h; sourceTree = "<group>"; };
-		C77F86BB19831491005694D6 /* KTFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTFlowLayout.m; sourceTree = "<group>"; };
 		C784F4151961C4C7004045DC /* UrbnTumblrChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbnTumblrChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C784F4181961C4C7004045DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C784F41A1961C4C7004045DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -205,8 +202,6 @@
 				C7989F14196456950096B741 /* KTPostCVC.m */,
 				C7430CB119634621005B0B99 /* KTPostCell.h */,
 				C7430CB219634621005B0B99 /* KTPostCell.m */,
-				C77F86BA19831491005694D6 /* KTFlowLayout.h */,
-				C77F86BB19831491005694D6 /* KTFlowLayout.m */,
 			);
 			name = CollectionView;
 			sourceTree = "<group>";
@@ -355,7 +350,6 @@
 				C784F4251961C4C7004045DC /* main.m in Sources */,
 				C798D2EC196655B20083B2B1 /* PostModel.xcdatamodeld in Sources */,
 				C784F4291961C4C7004045DC /* KTAppDelegate.m in Sources */,
-				C77F86BC19831491005694D6 /* KTFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

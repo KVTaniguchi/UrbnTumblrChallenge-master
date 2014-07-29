@@ -48,24 +48,6 @@
     _dataLoader = [KTDataLoader new];
     [_dataLoader makeSession];
     _dataLoader.completionDelegate = self;
-//    // Set to NO to prevent a small number
-//    // of cards from filling the entire
-//    // view height evenly and only show
-//    // their -topReveal amount
-//    //
-//    self.stackedLayout.fillHeight = YES;
-//    
-//    // Set to NO to prevent a small number
-//    // of cards from being scrollable and
-//    // bounce
-//    //
-//    self.stackedLayout.alwaysBounce = YES;
-//    
-//    // Set to NO to prevent unexposed
-//    // items at top and bottom from
-//    // being selectable
-//    //
-//    self.unexposedItemsAreSelectable = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,21 +59,15 @@
     KTPostCell *postCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"postCell" forIndexPath:indexPath];
     postCell.delegate = self;
     postCell.color = [UIColor randomColor];
-    
     postCell.postImagesView.layer.shouldRasterize = YES;
     postCell.postImagesView.layer.rasterizationScale = [UIScreen mainScreen].scale;
     Post *fetchedPost = [self.fetchedPostsForUser objectAtIndex:indexPath.row];
-    NSLog(@"slug: %@", fetchedPost.slug);
     [postCell.reblogLoadButton setHidden:YES];
     if (fetchedPost.caption) {
         NSString *caption = fetchedPost.caption;
         NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[caption dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
         postCell.captionTextView.attributedText = attributedString;
-
-        CGSize expectedCaptionSize = [attributedString size];
-        double height = expectedCaptionSize.height * expectedCaptionSize.width / 320;
         dispatch_async(dispatch_get_main_queue(), ^{
-            postCell.captionTextView.frame = CGRectMake(0, 230, 320, height);
             [postCell.captionTextView sizeToFit];
         });
 
@@ -158,6 +134,7 @@
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
+
 
 //-(NSMutableArray*)posts{
 //    if (!_posts) {
